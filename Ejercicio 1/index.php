@@ -171,6 +171,8 @@
 </table>
 </div>
 
+
+
 <!-- TABLA MANDARIN -->
 
 <div id="tablas">
@@ -185,7 +187,7 @@
 
                 //Utilizando arrays asociativos
                 $TituloMan = array(
-                    "frances" => "Mandarin", 
+                    "mandarin" => "Mandarin", 
                 );
 
                 foreach ($TituloMan as $Tituloman => $manRecibido) {
@@ -246,6 +248,230 @@
 </table>
 </div>
 
+<!-- TABLA RUSO -->
+
+<div id="tablas">
+<table class="table table-striped">
+
+<!-- Para crear un thead para 2 columnas -->
+<colgroup span="2">
+
+    <thead>
+        
+            <?php
+
+                //Utilizando arrays asociativos
+                $TituloRus = array(
+                    "ruso" => "Ruso", 
+                );
+
+                foreach ($TituloRus as $Titulorus => $rusRecibido) {
+                    echo '<th colspan="2">'.$rusRecibido.'</th>';
+                  }
+
+            ?>
+    
+    </thead>
+    <tbody >
+        <tr>
+            <?php
+
+             $rusoB = array(
+                "basico" => "Básico", 
+                "cantidad" => "12",
+                
+            );
+
+            foreach ($rusoB as $Ba => $BaRecibido) {
+                echo '<td>'.$BaRecibido.'</td>';
+              }
+            ?>
+        </tr>
+
+        <tr>
+            <?php
+
+             $rusoInt = array(
+                "intermedio" => "Intermedio", 
+                "cantidad" => "8",
+                
+            );
+
+            foreach ($rusoInt as $Int => $IntRecibido) {
+                echo '<td>'.$IntRecibido.'</td>';
+              }
+            ?>
+        </tr>
+
+        <tr>
+            <?php
+
+             $rusoAv = array(
+                "avanzado" => "Avanzado", 
+                "cantidad" => "4",
+                
+            );
+
+            foreach ($rusoAv as $Av => $AvRecibido) {
+                echo '<td>'.$AvRecibido.'</td>';
+              }
+            ?>
+        </tr>
+
+    </tbody>
+
+</table>
+</div>
+
+<!-- TABLA PORTUGUES -->
+
+<div id="tablas">
+<table class="table table-striped">
+
+<!-- Para crear un thead para 2 columnas -->
+<colgroup span="2">
+
+    <thead>
+        
+            <?php
+
+                //Utilizando arrays asociativos
+                $TituloPor = array(
+                    "portugues" => "Portugues", 
+                );
+
+                foreach ($TituloPor as $Titulopor => $porRecibido) {
+                    echo '<th colspan="2">'.$porRecibido.'</th>';
+                  }
+
+            ?>
+    
+    </thead>
+    <tbody >
+        <tr>
+            <?php
+
+             $porB = array(
+                "basico" => "Básico", 
+                "cantidad" => "30",
+                
+            );
+
+            foreach ($porB as $Ba => $BaRecibido) {
+                echo '<td>'.$BaRecibido.'</td>';
+              }
+            ?>
+        </tr>
+
+        <tr>
+            <?php
+
+             $porInt = array(
+                "intermedio" => "Intermedio", 
+                "cantidad" => "15",
+                
+            );
+
+            foreach ($porInt as $Int => $IntRecibido) {
+                echo '<td>'.$IntRecibido.'</td>';
+              }
+            ?>
+        </tr>
+
+        <tr>
+            <?php
+
+             $porAv = array(
+                "avanzado" => "Avanzado", 
+                "cantidad" => "10",
+                
+            );
+
+            foreach ($porAv as $Av => $AvRecibido) {
+                echo '<td>'.$AvRecibido.'</td>';
+              }
+            ?>
+        </tr>
+
+    </tbody>
+
+</table>
+</div>
+
+<!-- TABLA Japones -->
+
+<div id="tablas">
+<table class="table table-striped">
+
+<!-- Para crear un thead para 2 columnas -->
+<colgroup span="2">
+
+    <thead>
+        
+            <?php
+
+                //Utilizando arrays asociativos
+                $TituloJap = array(
+                    "japones" => "Japones", 
+                );
+
+                foreach ($TituloJap as $Titulojap => $japRecibido) {
+                    echo '<th colspan="2">'.$japRecibido.'</th>';
+                  }
+
+            ?>
+    
+    </thead>
+    <tbody >
+        <tr>
+            <?php
+
+             $japB = array(
+                "basico" => "Básico", 
+                "cantidad" => "90",
+                
+            );
+
+            foreach ($japB as $Ba => $BaRecibido) {
+                echo '<td>'.$BaRecibido.'</td>';
+              }
+            ?>
+        </tr>
+
+        <tr>
+            <?php
+
+             $japInt = array(
+                "intermedio" => "Intermedio", 
+                "cantidad" => "25",
+                
+            );
+
+            foreach ($japInt as $Int => $IntRecibido) {
+                echo '<td>'.$IntRecibido.'</td>';
+              }
+            ?>
+        </tr>
+
+        <tr>
+            <?php
+
+             $japAv = array(
+                "avanzado" => "Avanzado", 
+                "cantidad" => "67",
+                
+            );
+
+            foreach ($japAv as $Av => $AvRecibido) {
+                echo '<td>'.$AvRecibido.'</td>';
+              }
+            ?>
+        </tr>
+
+    </tbody>
+
+</table>
+</div>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
