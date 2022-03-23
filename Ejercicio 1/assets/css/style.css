@@ -1,0 +1,20 @@
+
+table {
+    width: 20% !important; 
+    
+ }
+
+ table thead{
+    background-color: #b5b3b3;
+    text-align: center !important;
+
+ }
+
+#tablas
+{
+    margin-left: 50px;
+    margin-top: 50px;
+    display: inline-block;
+    
+}
+
