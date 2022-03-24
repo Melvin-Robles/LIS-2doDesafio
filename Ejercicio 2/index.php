@@ -2,8 +2,19 @@
 <html>
     <head>
      <meta charset= "utf-8">
-     <link rel="stylesheet" href="style.css">
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <link rel="stylesheet" href="assets/css/style.css">
     </head>
+
+<!-- Header con Bootstrap -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="assets/img/logo.png" width="35" height="35" class="d-inline-block align-top"  alt="logo">
+    Desafio LIS UDB 
+  </a>
+</nav>
+
     <body>
 
     <form action=""  method="post">
@@ -24,7 +35,8 @@
             ?>
 
         <form action="" method="post">
-        
+
+        <?php echo '<div class="formu">';?>
         <b>Ingrese Datos: </b> <br>
         <input type="text" name="apellido[]" placeholder="Apellido del autor"> <br>
         <input type="text" name="nombre[]" placeholder="Nombre del autor"> <br>
@@ -33,7 +45,8 @@
         <input type="number" name="añoEdi[]" placeholder="Año de edición del libro"> <br>
         <input type="number" name="numPag[]" placeholder="Paginas del libro"> <br>
         <input type="text" name="notas[]" placeholder="Notas"> <br>
-        <input type="text" name="isbn[]" placeholder="ISBN del libro"> <br>
+        <input type="text" name="isbn[]" placeholder="ISBN:#############"> <br>
+        <?php echo '</div>';?>
 
 
 
@@ -48,7 +61,7 @@
         
         <br>
         <br>
-        <input type="submit" name="registrar" value="Insertar">
+        <div class="sub"><input type="submit" name="registrar" value="Insertar"></div>
 <?php 
 
     }
@@ -57,6 +70,8 @@
 ?>
       
         </form>
+        <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
 

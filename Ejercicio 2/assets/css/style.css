@@ -1,0 +1,28 @@
+.tabla
+{
+    background-color: rgb(141, 199, 180);
+    margin-top: 30px;
+    width: 25%;
+    border: 5px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.formu
+{
+    background-color: rgb(190, 190, 190);
+    width: 15%;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.sub input{
+
+    margin-left: 20px;
+
+  
+}
