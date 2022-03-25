@@ -77,64 +77,56 @@
 
 <?php
 
-if (isset($_POST['registrar'])) {
+if (isset($_POST['registrar']) && $_POST['registrar'] == "Insertar") {
 
-echo "<br>";
-echo "<br>";
-$apellido = $_POST['apellido'];
-$nombre = $_POST['nombre'];
-$tituloLibro = $_POST['tituloLibro'];
-$numeroEdi = $_POST['numeroEdi'];
-$añoEdi = $_POST['añoEdi'];
-$numPag = $_POST['numPag'];
-$notas = $_POST['notas'];
-$isbn = $_POST['isbn'];
+    echo "<br>";
+    echo "<br>";
+    extract($_POST);
+    $apellido = !empty($apellido) ? $apellido: "VARIOS";
+    $nombre = !empty($nombre) ? $nombre: ",AUTORES";
+    $tituloLibro = !empty($tituloLibro) ? $tituloLibro: "TITULO LIBRO";
+    $numeroEdi = !empty($numeroEdi) ? $numeroEdi: "NUMERO EDITORIAL";
+    $añoEdi = !empty($añoEdi) ? $añoEdi: "1900";
+    $numPag = !empty($numPag) ? $numPag: "100";
+    $notas = !empty($notas) ? $notas: "";
+    $isbn = !empty($isbn) ? $isbn: "ISBN:1234567890123";
 
-//Expresiones regulares para el ISBN de 13 digitos
-//Formato: ISBN:1234567890123
-function get_isbn($str) {
-    if (preg_match('/^ISBN:(\d{12}(?:\d|X))$/', $str, $matches)) {     
-        return $matches[1];
+    //Expresiones regulares para el ISBN de 13 digitos
+    //Formato: ISBN:1234567890123
+    function get_isbn($str) {
+        if (preg_match('/^ISBN:(\d{12}(?:\d|X))$/', $str, $matches))  
+            return $matches[1];
+        else
+            echo '<script language="javascript">alert("ISBN INVALIDO Formato: ISBN:1234567890123");</script>';
     }
-    else{
-        echo '<script language="javascript">alert("ISBN INVALIDO Formato: ISBN:1234567890123");</script>';
-        
+
+    function alertjs($str){
+        echo '<script language="javascript">alert("Debe llenar el campo \''.$str.'\'");</script>';
     }
- }
  
- foreach ($isbn as $str) {
-    $isbns = get_isbn($str);
-   
- }
+    foreach ($isbn as $str)
+        $isbns = get_isbn($str);
 
+    for ($i=0; $i < count($apellido); $i++) { 
 
-for ($i=0; $i < count($apellido); $i++) { 
+        if (get_isbn($str)) {
 
+            //$apellido = strtoupper($apellido[$i]);
 
-
-
-
- if (get_isbn($str)) {
-
-    echo '<div class="tabla">';
-    echo "Biblioteca UDB";
-    echo "<br>";
-    echo "<br>";
-    echo "<b>Apellido: </b> $apellido[$i] <br>";
-    echo "<b>Nombre: </b> $nombre[$i] <br>";
-    echo "<b>Titulo del libro: </b> $tituloLibro[$i] <br>";
-    echo "<b>Numero de Edición: </b> $numeroEdi[$i] <br>";
-    echo "<b>Año de Edición: </b> $añoEdi[$i] <br>";
-    echo "<b>Numero de paginas: </b> $numPag[$i] <br>";
-    echo "<b>Notas: </b> $notas[$i] <br>";
-    echo "<b>ISBN: </b> $isbn[$i] <br>";
-    echo '</div>';
-    
-
- }
-
-}
-
+            echo '<div class="tabla">';
+            echo "Biblioteca UDB";
+            echo "<br>";
+            echo "<br>";
+            echo "<b>Autor: </b> ". strtoupper($apellido[$i]) .",  $nombre[$i] <br> ";
+            echo "<b>Titulo del libro: </b> $tituloLibro[$i] <br>";
+            echo "<b>Numero de Edición: </b> $numeroEdi[$i] <br>";
+            echo "<b>Año de Edición: </b> $añoEdi[$i] <br>";
+            echo "<b>Numero de paginas: </b> $numPag[$i] <br>";
+            echo "<b>Notas: </b> $notas[$i] <br>";
+            echo "<b>ISBN: </b> $isbn[$i] <br>";
+            echo '</div>';
+        }
+    }
 }
 
 
